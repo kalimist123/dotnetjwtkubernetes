@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+apiVersion: v1
+metadata:
+  name: jwt-service
+spec:
+  selector:
+    app: jwt
+  type: LoadBalancer
+  ports:
+    - name: jwt-port
+      port: 4000
+      targetPort: 80

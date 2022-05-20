@@ -1,0 +1,14 @@
+ 1059  docker run -p 4000:80 kali042/dotnetjwt:1.0.0 .
+ 1060  ls
+ 1061  kubectl create -f deployment.yaml
+ 1062  kubectl create -f service.yaml
+ 1063  kubectl get deployments
+ 1064  kubectl get svc
+ 1065  kubectl delete services jwt-service
+ 1066  kubectl delete deployments  jwt-deployment
+ 1067  kubectl create -f deployment.yaml
+ 1068  kubectl create -f service.yaml
+ 1069  kubectl scale --replicas=6 deployment/jwt-deployment
+ 1070  kubectl get pods -o wide
+ 1071  kubectl delete deployments  jwt-deployment
+ 1072  kubectl delete services jwt-service
